@@ -13,7 +13,7 @@
   "author": "Victor Petrunin",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.9.0",
+    "cypress": "^12.10.0",
     "eslint": "^8.37.0"
   }
 }

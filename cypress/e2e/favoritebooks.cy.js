@@ -21,8 +21,8 @@ describe('Favorite books testing', () => {
         cy.contains('Books list').click();
         cy.contains('Add new').click();
         cy.get('#title').type(bookOne.title);
-        cy.get('#description');
-        cy.get('#authors');
+        cy.get('#description').type(bookOne.description);
+        cy.get('#authors').type(bookOne.author);
         cy.get('#favorite').click();
         cy.contains('Submit').click();
         cy.contains('Московский клуб').should('be.visible');
@@ -34,12 +34,12 @@ describe('Favorite books testing', () => {
       cy.contains('Books list').click();
       cy.contains('Add new').click();
       cy.get('#title').type(bookTwo.title);
-      cy.get('#description');
-      cy.get('#authors');
+      cy.get('#description').type(bookTwo.description);
+      cy.get('#authors').type(bookTwo.author);
       cy.get('#favorite').click();
       cy.contains('Submit').click();
       cy.contains('Лучший экипаж солнечной').should('be.visible');
-    })
+    });
 
     it('Delete from favorite book', () => {
       cy.visit('/BooksApp');
@@ -55,8 +55,8 @@ describe('Favorite books testing', () => {
     cy.contains('Books list').click();
     cy.contains('Add new').click();
     cy.get('#title').type(bookThree.title);
-    cy.get('#description');
-    cy.get('#authors');
+    cy.get('#description').type(bookThree.description);
+    cy.get('#authors').type(bookThree.author);
     cy.get('#favorite').click();
     cy.contains('Submit').click();
     cy.contains('Delete from favorite').should('be.visible');
